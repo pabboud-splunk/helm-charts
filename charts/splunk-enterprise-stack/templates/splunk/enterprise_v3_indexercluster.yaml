@@ -1,0 +1,8 @@
+{{- if .Values.indexerCluster.enabled }}
+apiVersion: enterprise.splunk.com/v3
+kind: IndexerCluster
+metadata:
+  name: indexercluster
+  finalizers:  
+  - "enterprise.splunk.com/delete-pvc"
+{{- end }}

@@ -1,0 +1,14 @@
+{{- if .Values.licenseMaster.enabled }}
+apiVersion: enterprise.splunk.com/v3
+kind: LicenseMaster
+metadata:
+  name: licensemaster
+  finalizers:  
+  - "enterprise.splunk.com/delete-pvc" 
+spec:
+  volumes:
+    - name: licenses
+      configMap:
+        name: splunk-licenses
+  licenseUrl: /mnt/licenses/enterprise.lic
+{{- end }}

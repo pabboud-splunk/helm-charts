@@ -1,0 +1,8 @@
+{{- if .Values.monitoringConsole.enabled }}
+apiVersion: enterprise.splunk.com/v3
+kind: MonitoringConsole
+metadata:
+  name: monitoringconsole
+  finalizers:  
+  - "enterprise.splunk.com/delete-pvc" 
+{{- end }}

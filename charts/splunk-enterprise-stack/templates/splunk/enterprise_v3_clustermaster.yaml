@@ -1,0 +1,8 @@
+{{- if .Values.clusterMaster.enabled }}
+apiVersion: enterprise.splunk.com/v3
+kind: ClusterMaster
+metadata:
+  name: clustermaster
+  finalizers:  
+  - "enterprise.splunk.com/delete-pvc" 
+{{- end}}

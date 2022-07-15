@@ -1,0 +1,14 @@
+{{- if .Values.standalone.enabled }}
+apiVersion: enterprise.splunk.com/v3
+kind: Standalone
+metadata:
+  name: standalone
+  finalizers:  
+  - "enterprise.splunk.com/delete-pvc" 
+spec:
+  clusterMasterRef:
+    name: clustermaster
+  monitoringConsoleRef:
+    name: monitoringconsole
+  replicas: {{ .Values.standalone.replicaCount }}
+{{- end }}

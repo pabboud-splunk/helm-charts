@@ -1,0 +1,8 @@
+{{- if .Values.searchHeadCluster.enabled }}
+apiVersion: enterprise.splunk.com/v3
+kind: SearchHeadCluster
+metadata:
+  name: searchheadcluster
+  finalizers:  
+  - "enterprise.splunk.com/delete-pvc" 
+{{- end }}
