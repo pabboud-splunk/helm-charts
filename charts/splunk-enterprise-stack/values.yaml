@@ -29,8 +29,8 @@ splunkOperator:
 
   fullnameOverride: ""
 
-  # Namespace specific deployment to limit operator access, defaults to cluster-wide access
-  watchNamespace: ""
+  # Give operator cluster-wide access, otherwise access is limited to operator namespace
+  clusterWideAccess: true
 
   serviceAccount:
     # Specifies whether a service account should be created
@@ -78,7 +78,7 @@ splunkOperator:
   affinity: {}
 
 clusterMaster:
-  enabled: true
+  enabled: false
 
 indexerCluster:
   enabled: false
@@ -87,11 +87,11 @@ licenseMaster:
   enabled: false
 
 monitoringConsole:
-  enabled: true
+  enabled: false
 
 searchHeadCluster:
   enabled: false
 
 standalone:
-  enabled: true
+  enabled: false
   replicaCount: 1

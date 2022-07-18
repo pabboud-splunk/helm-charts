@@ -3,8 +3,6 @@ apiVersion: enterprise.splunk.com/v3
 kind: LicenseMaster
 metadata:
   name: licensemaster
-  finalizers:  
-  - "enterprise.splunk.com/delete-pvc" 
 spec:
   volumes:
     - name: licenses

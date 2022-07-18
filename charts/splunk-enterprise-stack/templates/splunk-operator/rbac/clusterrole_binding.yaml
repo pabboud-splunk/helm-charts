@@ -1,11 +1,11 @@
-{{- if and (not .Values.splunkOperator.clusterWideAccess) .Values.splunkOperator.enabled }}
+{{- if and .Values.splunkOperator.clusterWideAccess .Values.splunkOperator.enabled }}
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   name: {{ include "splunk-enterprise-stack.operator.fullname" . }}-manager-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
+  kind: ClusterRole
   name: {{ include "splunk-enterprise-stack.operator.fullname" . }}-manager-role
 subjects:
 - kind: ServiceAccount
