@@ -26,5 +26,5 @@ appVersion: "1.16.0"
 dependencies:
 - name: splunk-operator
   version: "0.1.0"
-  repository: "~/helm-charts/charts/splunk-enterprise/charts/splunk-operator"
+  repository: "https://pabboud-splunk.github.io/helm-charts"
 
