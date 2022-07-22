@@ -3,6 +3,20 @@ entries:
   splunk-enterprise:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-07-22T21:56:56.036652327Z"
+    dependencies:
+    - name: splunk-operator
+      repository: https://pabboud-splunk.github.io/helm-charts
+      version: 0.1.1
+    description: A Helm chart for Splunk Enterprise managed by the Splunk Operator
+    digest: 3252569324346f0a8791ce58591c90a8546a74c2dcfce5abd8fa4f39100262ba
+    name: splunk-enterprise
+    type: application
+    urls:
+    - https://github.com/pabboud-splunk/helm-charts/releases/download/splunk-enterprise-0.1.2/splunk-enterprise-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-07-22T20:31:02.528122744Z"
     dependencies:
     - name: splunk-operator
@@ -49,6 +63,16 @@ entries:
   splunk-operator:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-07-22T21:56:56.154344447Z"
+    description: A Helm chart for the Splunk Operator for Kubernetes
+    digest: 97d95b8fb478b119a469b4966229e18e16c96955ef1e4c16efbd88a22593df33
+    name: splunk-operator
+    type: application
+    urls:
+    - https://github.com/pabboud-splunk/helm-charts/releases/download/splunk-operator-0.1.2/splunk-operator-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-07-22T20:31:02.720668199Z"
     description: A Helm chart for the Splunk Operator for Kubernetes
     digest: 017a0b7fac6a81481eb277bff67934cdaaf78a4cb3f7e1ca85dc5ad25f26c7d3
@@ -67,4 +91,4 @@ entries:
     urls:
     - https://github.com/pabboud-splunk/helm-charts/releases/download/splunk-operator-0.1.0/splunk-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2022-07-22T20:31:02.720688199Z"
+generated: "2022-07-22T21:56:56.154392947Z"
