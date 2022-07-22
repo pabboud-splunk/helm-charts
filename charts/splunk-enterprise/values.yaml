@@ -56,11 +56,13 @@ standalone:
 
 clusterMaster:
   enabled: false
-  replicaCount: 1  
+  replicaCount: 1 
+  name: "clustermaster" 
 
 indexerCluster:
   enabled: false
-  replicaCount: 1
+  replicaCount: 3
+
 
 searchHeadCluster:
   enabled: false

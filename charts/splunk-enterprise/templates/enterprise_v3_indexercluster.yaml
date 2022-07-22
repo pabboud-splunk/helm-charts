@@ -3,4 +3,7 @@ apiVersion: enterprise.splunk.com/v3
 kind: IndexerCluster
 metadata:
   name: indexercluster
+spec:
+  replicas: {{ .Values.indexerCluster.replicaCount }}
+  clusterMasterRef: {{ .Values.clusterMaster.name }}
 {{- end }}
