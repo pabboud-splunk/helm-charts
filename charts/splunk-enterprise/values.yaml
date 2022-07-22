@@ -1,0 +1,75 @@
+# Default values for splunk-enterprise.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Splunk image
+image:
+  repository: docker.io/splunk/splunk:edge
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+nameOverride: ""
+
+fullnameOverride: ""
+
+splunkInstance:
+
+  # clusterMasterRef
+  # monitoringConsoleRef
+  # licenseMasterRef
+  # image
+  # finalizers
+
+  listInstances: []
+
+    # kind
+    # name
+    # replicas
+    # affinity
+    # apprepo
+    # defaults
+    # defaultsUrl
+    # defaultsUrlApps
+    # etcVolumeStorageConfig
+    # extraEnv
+    # resources
+    # varVolumeStorageConfig
+    # volumes
+
+# sva type
+sva:
+  enabled: true
+  sites: []
+    # name
+    # list of nodes
+    # multisite_master
+    # instances to deploy at each site
+
+standalone:
+  enabled: true
+  replicaCount: 1
+
+clusterMaster:
+  enabled: false
+  replicaCount: 1  
+
+indexerCluster:
+  enabled: false
+  replicaCount: 1
+
+searchHeadCluster:
+  enabled: false
+  replicaCount: 1
+
+licenseMaster:
+  enabled: false
+  replicaCount: 1
+
+monitoringConsole:
+  enabled: false
+  replicaCount: 1
