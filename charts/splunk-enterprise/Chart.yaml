@@ -23,8 +23,8 @@ version: 1.0.0
 # It is recommended to use it with quotes.
 appVersion: "2.0.0"
 
-# dependencies:
-# - name: splunk-operator
-#   version: "1.0.0"
-#   repository: "https://pabboud-splunk.github.io/helm-charts/"
-#   condition: splunk-operator.enabled
+dependencies:
+- name: splunk-operator
+  version: "1.0.0"
+  repository: "https://pabboud-splunk.github.io/helm-charts/"
+  condition: splunk-operator.enabled
