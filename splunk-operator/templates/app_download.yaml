@@ -1,0 +1,16 @@
+{{- if .Values.splunkOperator.appFramework.enabled }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    name: {{ include "splunk-operator.operator.fullname" . }}
+  name: {{ include "splunk-operator.operator.fullname" . }}-app-download
+  namespace: {{ include "splunk-operator.namespace" . }}
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.splunkOperator.appFramework.appStorage }}
+  volumeMode: Filesystem
+{{- end }}
